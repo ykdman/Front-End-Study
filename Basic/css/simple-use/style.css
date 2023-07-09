@@ -1,0 +1,32 @@
+* {
+  color: green;
+}
+
+li {
+  color: blue;
+}
+
+li#special {
+  color: pink;
+}
+
+.red {
+  background-color: yellow;
+  width: 100px;
+  height: 100px;
+}
+
+button:hover {
+  color: red;
+}
+
+a[href] {
+  /* a태그 중 href 속성을 가지고 있는 속성만! */
+  color: purple;
+}
+
+a[href$=".com"] {
+  /* a태그 중 href 속성을 가지고 있는 엘리먼트만! */
+  /* href속성이 '.com'으로 끝나는 엘리먼트만 */
+  color: yellowgreen;
+}
