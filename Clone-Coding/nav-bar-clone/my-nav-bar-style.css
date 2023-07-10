@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Caprasimo&display=swap");
+body {
+  margin: 0;
+  font-family: "Caprasimo", cursive;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* navbar */
+.navbar {
+  /* 현재 구성 엘리먼트의 최상위 부모 */
+  background-color: #a78295;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* logo */
+.navbar-logo {
+  padding: 4px 12px;
+  font-size: 24px;
+}
+
+/* menu-items */
+.menu-items {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+.menu-items li {
+  padding: 8px 12px;
+}
+.menu-items li:hover {
+  background-color: #faf0d7;
+  border-radius: 10px;
+}
+
+/* sns-icons */
+.sns-icons {
+  list-style: none;
+  display: flex;
+  padding-left: 0;
+}
+.sns-icons li {
+  padding: 8px 12px;
+}
+
+.navbar-toggleBtn {
+  position: absolute;
+  padding: 8px 24px;
+  right: 32px;
+  font-size: 24px;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+  .menu-items {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .menu-items li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .sns-icons {
+    display: none;
+    /* icons의 flex-direction Row 이므로 justify-content로 중심축으로 부터 center 정렬 */
+    justify-content: center;
+    width: 100%;
+  }
+
+  .navbar-toggleBtn {
+    display: block;
+  }
+
+  .menu-items.active,
+  .sns-icons.active {
+    display: flex;
+  }
+}
