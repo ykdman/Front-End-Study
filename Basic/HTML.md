@@ -27,3 +27,12 @@
 
 - Block & Inline
   ![block and inline](HTML-IMG/Block-Inline.png)
+
+* html 태그 선언 팁
+
+```html
+div.container>div.item.item$($)*10
+```
+
+- 위처럼 작성하고 자동완성 하면,
+  div .container 내에 div.item.item(순번)인 태그가 완성

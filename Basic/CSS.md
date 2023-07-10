@@ -10,6 +10,15 @@
 1. MDN css Reference
    <https://developer.mozilla.org/ko/docs/Web/CSS/Reference>
 
+2. FlexBox 참고
+   <https://css-tricks.com/snippets/css/a-guide-to-flexbox/>
+
+3. mdn flexbox
+   <https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox>
+
+4. FlexBox Froggy
+   <https://flexboxfroggy.com/#ko>
+
 ## 1. 의미 , 정의
 
 - Cascading Style Sheet
@@ -143,3 +152,19 @@ div {
   position: sticky;
 }
 ```
+
+## 3. FlexBox
+
+1. Box에 적용 할 수 있는 속성 (Container)
+
+- display / flex-direction / flex-wrap / flex-flow / justify-content / align-items / align-content
+
+2. Item 에 적용할수 있는 속성
+
+- order / flex-grow / flex-shrink / flex / align-self
+
+3. FlexBox는 중심축과 수평축이 존재
+
+- Item 들을 각 Row씩 나타낼 때 중심축 : Y축 수직축 : X축
+
+- ITem 들을 각 Column 단위씩 나타낼때, 중심축 : X 축 수직축 : Y축

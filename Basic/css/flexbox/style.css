@@ -1,0 +1,67 @@
+.container {
+  background-color: beige;
+  height: 100vh;
+  /* 보이는 view port에 100%를 쓰겠다는 선언 부모인 body와 html을 무시하고 사용 */
+  display: flex;
+  /* 최상위 부모인 container에게 flex 속성을 부여해줘야 한다. */
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* wrap 한줄에 꽉차면 다음 줄로 나머지가 이동 */
+  /* flex-flow: column wrap; direction 과 wrap 을 동시에 */
+  justify-content: space-evenly;
+  /* justifhy content 는 중심축 기준 아이템 정렬 */
+
+  align-items: center;
+  /* align-items 는 반대축(수직축)기준 아이템 정렬 */
+
+  align-content: center;
+}
+
+.item {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+}
+
+.item1 {
+  background-color: #ef9a9a;
+  flex-grow: 1;
+  /* 컨테이너가 늘어날때 늘어나는 비율, 기본값 0 */
+  flex-shrink: 1;
+  /* flex-shrink = 컨테이너가 줄어들때 Item이 줄어드는 비율 */
+  flex-basis: 30%;
+  /* 컨테이너에서 차지하는 비율 */
+
+  align-self: baseline;
+  /* item 별도로 정렬 */
+}
+
+.item2 {
+  background-color: #f48b1f;
+  flex-grow: 2;
+}
+.item3 {
+  background-color: #ce93d8;
+  flex-grow: 3;
+}
+.item4 {
+  background-color: #76d45e;
+}
+.item5 {
+  background-color: #9e7aec;
+}
+.item6 {
+  background-color: #eb40ad;
+}
+.item7 {
+  background-color: #31e1eb;
+}
+.item8 {
+  background-color: #315c36;
+}
+.item9 {
+  background-color: #a8d522;
+}
+.item10 {
+  background-color: #cba3d3;
+}
