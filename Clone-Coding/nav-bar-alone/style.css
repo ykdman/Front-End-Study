@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Caprasimo&family=Mukta:wght@300&display=swap");
+body {
+  margin: 0;
+  font-family: "Caprasimo", cursive;
+  font-family: "Mukta", sans-serif;
+  color: #f5f5f5;
+}
+
+a {
+  text-decoration: none;
+  color: #f5f5f5;
+}
+
+li {
+  list-style: none;
+  color: #f5f5f5;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #3f2e3e;
+  align-items: center;
+}
+
+.navbar i {
+  padding: 8px 12px;
+}
+
+/* logo */
+.logo {
+  font-size: 24px;
+}
+
+/* menu items */
+.menu-items {
+  display: flex;
+  justify-content: center;
+}
+
+.menu-items li {
+  padding: 8px 12px;
+  text-align: center;
+}
+
+.menu-items li a {
+  text-align: center;
+}
+
+.menu-items li:hover {
+  background-color: #6527be;
+  border-radius: 4px;
+}
+
+/* sns-icons */
+.sns-icons {
+  display: flex;
+}
+
+.sns-icons i {
+  padding: 8px 12px;
+  font-size: 18px;
+}
+
+.toggleBtn {
+  color: #f5f5f5;
+  position: absolute;
+  right: 2%;
+  font-size: 24px;
+  display: none;
+}
+
+.toggleBtn:hover {
+  background-color: #6527be;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-items {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-left: 0;
+  }
+  .menu-items li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .sns-icons {
+    display: none;
+    justify-content: center;
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .toggleBtn {
+    display: block;
+  }
+
+  .menu-items.active,
+  .sns-icons.active {
+    display: flex;
+  }
+}
