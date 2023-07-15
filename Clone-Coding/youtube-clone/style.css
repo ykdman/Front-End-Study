@@ -1,0 +1,221 @@
+/* Roboto Regular 400 */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+:root {
+  /* Color */
+  --white-color: #fff4f4;
+  --black-color: #080202;
+  --red-color: #ff1e00;
+  --blue-color: #0079ff;
+  --grey-dark-color: #a8a196;
+  --grey-light-color: #e9e8e8;
+  /* Size */
+  --padding: 12px;
+  --avatar-size: 36px;
+  --icon-size: 16px;
+
+  /* Font Size */
+  --font-large: 18px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  /* 요소의 크기를 지정할때, Margin 과 padding이 포함되어 크기가 결정되게한다. */
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+button:focus {
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+/* header 설정 */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--padding);
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+
+/* header > .logo */
+header .logo {
+  font-size: var(--font-large);
+}
+
+/* header > .logo > i (youtube icon) */
+header .logo i {
+  color: var(--red-color);
+}
+
+header .buttons .fa-search {
+  margin-right: var(--padding);
+}
+
+/*  Video Player */
+.player {
+  /* 영상 화면 가운데로 */
+  text-align: center;
+  background-color: var(--black-color);
+  /* 아래 스크롤 시 top 에 고정 */
+  position: sticky;
+  top: 0;
+}
+
+.player video {
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+}
+
+/* info */
+.info {
+  padding: var(--padding);
+}
+
+/* .info > .metadata > .hashtags */
+.info .metadata .hashtags {
+  display: flex;
+  font-size: var(--font-small);
+  color: var(--blue-color);
+}
+
+/* .info > .metadata > .hashtags > li */
+.info .metadata .hashtags li {
+  margin: var(--padding);
+}
+
+.info .metadata .titleAndButton {
+  display: flex;
+}
+
+.info .metadata .titleAndButton .title {
+  font-size: var(--font-medium);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+
+  margin-right: var(--padding);
+}
+
+.info .metadata .titleAndButton .moreBtn {
+  height: 100%;
+}
+
+.info .views {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+
+/* action */
+
+.actions {
+  margin: var(--padding) 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.actions button {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+
+.actions button i {
+  margin: 0 auto;
+  margin-bottom: calc(var(--padding) / 2);
+  font-size: var(--icon-size);
+}
+.actions button i.active {
+  color: var(--blue-color);
+}
+/* Channel Description */
+.channel {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--grey-light-color);
+  border-bottom: 1px solid var(--grey-light-color);
+}
+
+.channel .metadata {
+  display: flex;
+  align-items: center;
+}
+
+.channel .metadata img {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border-radius: 50%;
+}
+
+.channel .metadata .info {
+  display: flex;
+  flex-direction: column;
+}
+
+.channel .metadata .info .name {
+  font-size: var(--font-medium);
+}
+
+.channel .metadata .info .subscribers {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+
+.channel .subscribe {
+  /* Text 표현 형식 변경 */
+  text-transform: uppercase;
+  color: var(--red-color);
+  font-size: var(--font-medium);
+}
+
+/* upnext */
+.upNext {
+  padding: 0 var(--padding);
+}
+
+.upNext > .title {
+  font-size: var(--font-medium);
+  color: var(--grey-dark-color);
+  margin-bottom: calc(var(--padding) / 2);
+}
+
+.upNext .item {
+  display: flex;
+}
+
+.upNext .item img {
+  flex: 1 1 35%;
+}
+
+.upNext .item .img img {
+  width: 100%;
+}
+
+.upNext .item .info {
+  flex: 1 1 60%;
+}
+
+.upNext .item .moreBtn {
+  flex: 1 1 5%;
+}
+
+.upNext .item .info {
+  display: flex;
+  flex-direction: column;
+}
