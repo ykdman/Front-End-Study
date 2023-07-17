@@ -168,3 +168,102 @@ div {
 - Item 들을 각 Row씩 나타낼 때 중심축 : Y축 수직축 : X축
 
 - ITem 들을 각 Column 단위씩 나타낼때, 중심축 : X 축 수직축 : Y축
+
+---
+
+## 4. 반응형 단위 총정리
+
+- < 참고 블로그>
+  1. <https://velog.io/@uni/CSS-%EB%B0%98%EC%9D%91%ED%98%95-%EC%9B%B9%EC%9D%84-%EB%A7%8C%EB%93%A4%EB%95%8C-%EC%96%B4%EB%96%A4-%EB%8B%A8%EC%9C%84%EB%A5%BC-%EC%93%B0%EB%8A%94%EA%B2%8C-%EC%A2%8B%EC%9D%84%EA%B9%8C>
+
+> 먼저보는 요약
+
+1. em은 자신의 부모의 요소(font-size)를 기반으로 계산을 한다.
+   (부모의 font-size를 곱한값으로 게산)
+2.
+
+> 사이즈의 종류
+
+- 기본적으로 브라우저에서 폰트에 지정하는 크기는 16px
+- 절대적인 값의 단위 (px)
+- 상대적인 값의 단위 (em, rem, vh, vw ...)
+- 사이즈 유닛 표
+
+  <img src="css/img/css-size-unit.png" style="width:300px; height:200px"/>
+
+  > <span style="color:#75C2F6">**em**</span>
+
+  - 선택된 font-family에 상관없이 항상 고정된 폰트 사이즈를 가지고 있음
+  - 현재 font-size = 16px 이라면 1em = 16px 이 됨
+
+  ```html
+  <style>
+    .parent {
+      font-size: 8em;
+    }
+    .child {
+      font-size: 0.5em;
+    }
+  </style>
+
+  <div class="parent">
+    Parent
+    <div class="child">Child</div>
+  </div>
+  ```
+
+  - em 이라는 CSS 반응형 단위는 부모 요소의 font-size에 기반하여 크기를 계산한다
+  - parent 의 8em은 자신의 부모인 html을 기반으로 하여 8\*16px = 128px 이 됨
+  - child는 부모인 parent 요소를 기반으로 하여 128px \* 0.5 = 64px 이 된다.
+  - 8em = 800%로 볼수 있다.
+
+  <br>
+
+  > <span style="color:#75C2F6">**rem**</span>
+
+  - 루트의 요소에 기반하여 사이즈가 계산되어짐
+  - 루트 = html
+
+    ```html
+    <style>
+      .parent {
+        font-size: 8rem;
+        /* html 16px * 8 = 128px */
+      }
+      .child {
+        font-size: 0.5rem;
+        /* html 16px * 0.5 = 8px */
+      }
+    </style>
+
+    <div class="parent">
+      Parent
+      <div class="child">Child</div>
+    </div>
+    ```
+
+> **vw**
+
+- view port 의 너비에 기반하여 넓이 값을 계산한다
+- 50vw = 브라우저 넓의 절반을 사용 (50%)
+- vmin, vmax 사용 가능
+
+> **vh**
+
+- view port 의 높이에 기반하여 값을 계산
+- 10vh = 브라우저 높이의 10% 사용
+- vmin, vmax 사용 가능
+
+## 5. em 과 rem의 사용
+
+> 반응형 단위에 대한 사용 기준
+
+- Parent 기준 vs Browser 기준
+
+  - Parent 기준
+    : em , %
+  - Browser 기준 : vh, vm (v\*), rem
+
+- 요소의 너비와 높이 (box) 기준 vs font-size 기준
+  - box 기준 : %, v\*
+  - font size 기준 : em, rem
