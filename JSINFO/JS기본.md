@@ -609,3 +609,44 @@ console.log(undefined == 0); // false
 - 일치 연산자 (===) 를 제외한 비교 연산자의 피연산자의 자리에 null 이나 undefined 가 오지 않도록 주의
 
 - undefined나 null 이 될 가능성있는 변수가 피연산자가 되지 않게 해야 한다.
+
+## if 와 '?' 를 사용한 조건 처리
+
+> 조건부 연산자 '?' **(삼항 연산자)**
+
+- 조건에 따라 다른 값을 변수에 할당 해주어야 할때 사용
+
+```js
+let result = condition ? var1 : var2;
+/**
+ * condition 이 true 일 때 : var1 을 result에 할당
+ * condition 이 false 일 때 : var2 를 result에 할당
+ */
+
+let age = 19;
+let accessAllowed = age > 18 ? true : false;
+console.log(accessAllowed); // true
+```
+
+> 다중 삼항 연산자
+
+```js
+let age = prompt("나이를 입력 해 주세요", 18);
+
+let message =
+  age < 3
+    ? "안녕 아기야"
+    : age < 18
+    ? "안녕!"
+    : age < 100
+    ? "환영합니다!!!"
+    : "연세가 아주 많으시군요!!";
+
+console.log(message);
+/**
+ * 1. age < 3 : '안녕 아기야'
+ * 2. 3 < age < 18 : '안녕!'
+ * 3. 18 < age < 100 : '환영합니다!'
+ * 4. 100 < age : '연세가 아주 많으시군요!'
+ */
+```
