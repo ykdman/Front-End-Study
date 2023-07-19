@@ -539,3 +539,73 @@ console.log(b); //2, 연산 후의 변수값 반환
 let a = (1 + 2, 3 + 4);
 console.log(a); // 7 (3 + 4의 결과)
 ```
+
+## 비교 연산자
+
+- <, >
+- =>, <=
+- == (===)
+- != (!==)
+
+> 문자열 비교
+
+- 자바 스크립트는 '사전' 순서대로 문자열을 비교한다.(정확히는 유니코드 순)
+- 알파벳이 사전의 뒤에 있는 문자일 수록 크다고 판단된다.
+
+  > > 문자열 비교 순서
+
+  1. 두 문자열의 첫 글자를 비교
+  2. 첫 번째 문자열의 첫 글자가 다른 문자열의 첫 글자보다 크면(작으면), 첫 번째 문자열이 두 번째 문자열보다 크다고(작다고) 결론 내고 비교를 종료
+  3. 두 문자열의 첫 글자가 같으면 두 번째 글자를 같은 방식으로 비교
+  4. 글자 간 비교가 끝날 때까지 이 과정을 반복
+  5. 비교가 종료되었고 문자열의 길이도 같다면 두 문자열은 동일하다고 결론 냅니다. 비교가 종료되었지만 두 문자열의 길이가 다르면 길이가 긴 문자열이 더 크다고 결론
+
+> 다른 형을 가진 값 간의 비교
+
+- 비교하려는 값의 자료형이 다르면 JS는 이 값들을 숫자형으로 변환하여 비교
+
+```js
+console.log("2" > 1); // 2 > 1 => true
+console.log("01" == 1); // 1 == 1 => true
+
+// Boolean
+console.log(true == 1); // true 는 1로 변환 됨 => true
+console.log(false == 0); // false는 0으로 변환 => true
+```
+
+> null 이나 undefined 와 비교
+
+```js
+console.log(null === undefined); // false (===)
+console.log(null == undefined); // true (==)
+```
+
+- 다른 비교 연산자로 null 과 undefined 비교
+
+  - null -> 0 변환 후 비교
+  - undefined -> NaN 변환 후 비교
+
+> null 과 0 비교
+
+```js
+console.log( null > 0 ); // false
+console.log( null -- 0 ); // false
+console.log( null >= 0 ); // true !!!
+
+// 동등 연산자(==) 비교시 null 은 0으로 변환되지 않는다.
+// 동등 연산자(==) 는 null 이나 undefined 를 형변환 후 비교하지 않는다.
+```
+
+> undefined의 비교 불가능함
+
+```js
+console.log(undefined > 0); // false, undefined -> NaN
+console.log(undefined < 0); // false, undefined -> NaN
+console.log(undefined == 0); // false
+```
+
+> 비교연산 시 주의점
+
+- 일치 연산자 (===) 를 제외한 비교 연산자의 피연산자의 자리에 null 이나 undefined 가 오지 않도록 주의
+
+- undefined나 null 이 될 가능성있는 변수가 피연산자가 되지 않게 해야 한다.
