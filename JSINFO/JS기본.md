@@ -650,3 +650,243 @@ console.log(message);
  * 4. 100 < age : '연세가 아주 많으시군요!'
  */
 ```
+
+<br>
+
+## 논리 연산자
+
+> OR ( || )
+
+```js
+alert(true || true); // true
+alert(false || true); // true
+alert(true || false); // true
+alert(false || false); // false
+
+// 피 연산자가 boolean 형이 아니면 형변환 후 평가한다
+// 1 -> true , 0 -> false
+if (1 || 0) {
+  //if(true || false)
+  console.log("truthy!");
+}
+```
+
+> JS OR 연산의 특이한 점
+
+```js
+reuslt = value1 || value2 || value3;
+```
+
+- 이때, OR 연산자는 밑의 순서에 따라 연산을 수행 한다.
+
+  1. 왼쪽 -> 오른쪽으로 평가
+  2. 각 피연산자를 boolean 형으로 변환 후, 그 값이 true면 연산을 멈춤
+  3. 이때, boolean 값이 아닌 피연산자의 **원래 값** 을 반환
+  4. 피연산자 모두를 평가한 경우 (모두 false)엔 마지막 피연산자를 반환
+
+  ```js
+  alert(1 || 0); // 1 (1은 truthy임)
+
+  alert(null || 1); // 1 (1은 truthy임)
+  alert(null || 0 || 1); // 1 (1은 truthy임)
+
+  alert(undefined || null || 0); // 0 (모두 falsy이므로, 마지막 값을 반환함)
+  ```
+
+## nulish 병합 연산자 '??'
+
+> a ?? b
+
+- a 가 null 도 아니고, undefined도 아니라면 a로 값 확정
+
+- 그 외에는 b로 값을 확정
+
+```js
+let x = a !== null && a !== undefined ? a : b;
+```
+
+- 즉 **??** 연산자는 피연산자의 값이 null 또는 undefined에 대한 분기조건을 가지며, 이에 대한 할당을 수행
+
+```js
+let firstName = null;
+let lastName = null;
+let nickName = "바이올렛";
+
+console.log(firstname ?? lastName ?? nickName ?? "익명사용자");
+// "바이올렛"
+/**
+ * 1. firstName !== null && !== undefined => firstName 할당 | lastName 할당
+ * 2. lastName !== null && !== undefined => lastName할당 | nickName 할당
+ * 3. nickName !== null && !== undefined => nickName 할당 | '익명사용자'할당
+ */
+```
+
+## while 과 for 반복문
+
+> **while 반복문**
+
+```js
+while (condition) {
+  // body
+  // loop Process Code
+}
+```
+
+- condition이 truthy이면 body가 실행된다
+
+> **do-while 반복문**
+
+```js
+do {
+  // body
+} while (condition);
+```
+
+- body가 처음에 먼저 한번 실행 된다
+- 첫 body 실행 후, while의 condition을 확인한다
+
+> **for 반복문**
+
+```js
+for (begin; condition; step) {
+  //body
+}
+/**
+ * begin : loop 진입 초기에 한번 실행
+ * condition : 반복마다 확인되는 조건, false일 때 반복을 중지한다
+ *
+ * step : 각 반복의 body가 실행 된 이후에 실행 된다.
+ */
+```
+
+```js
+// 무한 for loop
+for (;;) {
+  //body
+}
+```
+
+> 반복문을 빠져나오기 (break)
+
+```js
+let sum = 0;
+
+while (true) {
+  let value = +prompt("숫자입력");
+  if (!value) break;
+  sum += value;
+}
+
+console.log("합계 :" + sum);
+```
+
+- **break** 구문으로 원하는 때에 언제든지 반복문을 빠져 나올 수 있다.
+
+> 다음 반복으로 넘어가기 (continue)
+
+```js
+for (let i = 0; i < 10; i++) {
+  if (i % 2 === 0) continue;
+  //위 조건이 참일 떄, 나머지 코드는 수행되지 않고 다음 loop item으로 반복이 넘어감
+  console.log(i);
+}
+```
+
+> 레이블 과 break, continue
+
+```js
+for (let i = 0; i < 3; i++) {
+  for (let j = 0; j < 3; j++) {
+    let input = prompt(`${i},${j}의 값`, "");
+    // 여기서 break 로는 j를 body로 loop하는 반복만 빠져나올 수 있다.
+  }
+}
+```
+
+- 위 와 같이 중첩 반복문의 전체 구문에서 빠져나와야 할때는 레이블을 이용해야 한다
+
+```js
+labelName : for (...) {
+  // body
+}
+```
+
+```js
+outer: for (let i = 0; i < 3; i++) {
+  for (let j = 0; j < 3; j++) {
+    let input = prompt(`${i},${j}`, "test");
+
+    if (!input) break outer;
+    // 레이블 전체를 빠져나온다.
+  }
+}
+```
+
+## switch 문
+
+- 복수의 if 조건을 switch 문으로 바꿀수 있음
+- 특정변수를 다양한 상황에서 비교할 수 있게 해준다
+
+```js
+let a = 4;
+
+switch (a) {
+  case 3:
+    console.log("up");
+    break;
+  case 4:
+    console.log("correct!");
+    break;
+  case 5:
+    console.log("down");
+    break;
+  default:
+    console.log("어떤값인지 파악이 안돼..");
+}
+```
+
+    1. a 의 값을 1번 case의 3값과 비교
+    2. a의 값을 2번 case의 4 값과 비교
+    -> a === 4이므로 "correct!" 를 반환 하고 종료
+    3. case에 적합한 condition이 없다면, default 부분을 수행후 종료
+
+```js
+// break 가 없는 switch 문
+let a = 2 + 2;
+
+switch (a) {
+  case 3:
+    alert("비교하려는 값보다 작습니다.");
+  case 4:
+    alert("비교하려는 값과 일치합니다.");
+  case 5:
+    alert("비교하려는 값보다 큽니다.");
+  default:
+    alert("어떤 값인지 파악이 되지 않습니다.");
+}
+/**
+ * 이때 switch의 case 별 break가 없으므로 수행되는 case는
+ * case 4 -> case 5 -> default 가 수행됨
+ */
+```
+
+> 여러개의 'case' 문 묶기
+
+```js
+let a = 3;
+
+switch (a) {
+  case 4:
+    alert("계산이 맞습니다!");
+    break;
+
+  case 3: // (*) 두 case문을 묶음
+  case 5:
+    alert("계산이 틀립니다!");
+    alert("수학 수업을 다시 들어보는걸 권유 드립니다.");
+    break;
+
+  default:
+    alert("계산 결과가 이상하네요.");
+}
+```
