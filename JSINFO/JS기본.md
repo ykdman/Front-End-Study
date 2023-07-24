@@ -890,3 +890,285 @@ switch (a) {
     alert("계산 결과가 이상하네요.");
 }
 ```
+
+## 함수
+
+> 함수 선언
+
+```js
+function showMessage() {
+  console.log("안녕하세요");
+}
+```
+
+> 함수 호출
+
+```js
+function showMessage() {
+  console.log("안녕하세요");
+}
+
+showMessage();
+```
+
+> 지역 변수
+
+- 함수 내에서 선언한 변수인 지역 변수(local Variable) 은 함수 안에서만 접근가능
+
+```js
+funtion showMessage() {
+  let message = "안녕~";
+  console.log(message);
+}
+
+showMessage(); // 안녕~
+
+console.log(message); // ReferenceError 발생
+```
+
+> 외부 변수
+
+- 함수 내부에서, 함수 외부에 선언한 변수(outrer variable)에 접근 가능
+- 외부 변수를 수정 할수도 있다
+
+```js
+let userName = "John";
+
+function showMessage() {
+  let message = "Hello," + userName; //외부변수 userName 접근
+  console.log(message);
+}
+
+showMessage(); // "Hello,John"
+```
+
+> 외부변수를 가리는 지역변수
+
+- 함수 내부에 지역변수와 외부변수의 이름이 같은 상황에서 함수 내부에 외부변수로 접근하게 되면, 지역변수(같은이름)에 접근하게 된다
+
+```js
+let userName = "John";
+
+function showMessage() {
+  let userName = "Bob"; // 외부변수와 같은 이름을 가진 지역변수를 선언
+
+  let message = "Hello, " + userName; //Bob
+
+  console.log(message);
+}
+
+showMessage(); // Hello, Bob
+
+console.log(userName); // John
+```
+
+> **전역변수**
+
+- 함수외부에서 선언된 변수 (외부변수와 같음)
+- 전역 변수는 같은 이름을 가진 지역 변수에 의해 가려지지만 않는다면 모든 함수에서 접근할 수 있다
+- 변수는 연관되는 함수 내에 선언하고, 전역 변수는 되도록 사용하지 않는 것이 좋다
+
+> **매개변수**
+
+- 임의의 데이터를 함수안에 전달하기위해 사용하는 매개체 변수
+- 인자 (parameter)로도 불린다
+
+```js
+function showMessage(from, text) {
+  // 인자 : from, text
+  console.log(from + " : " + text);
+}
+
+showMessage("John", "Hi~!");
+// John : Hi~!
+```
+
+- 인자값은 함수 내부에서 수정이 가능
+
+```js
+function showMessage(from, text) {
+  // 인자 : from, text
+  from = "*" + from + "*"; // from 인자 수정
+  console.log(from + " : " + text);
+}
+
+let from = "John";
+showMessage(from, "Hello!");
+// *John* : Hello!
+```
+
+> 기본값 (Default Of Parameter)
+
+- 함수 호출 시, 매개변수에 값을 전달하지 않으면, undefined가 전달된다
+
+```js
+// 인자 기본값 설정
+function showMessage(from, text = "Not Text Given") {
+  console.log(from + " : " + text);
+}
+
+showMessage("Ahn");
+// Ahn : Not Text Given
+
+showMessage("John", undefined);
+/**
+ * 인자값이 undefined 와 엄격히 일치한다면 (기본값을 설정한 함수)
+ * 매개변수에 값을 undefined로 전달해도 기본값을 출력한다
+ */
+```
+
+```js
+// 기본값을 설정하는 다른 방법1 (if 활용)
+function showMessage1(text) {
+  if (text === undefined) {
+    text = "기본값";
+  }
+
+  console.log(text);
+}
+
+showMessage1();
+// "기본값"
+
+// 기본값을 설정하는 다른 방법2 (|| 연산자)
+function showMessage2(text) {
+  text = text || "기본값";
+  // 매개변수에 빈문자열 ("") 이나 빈값이 넘어오면 "기본값" 을 할당
+  console.log(text);
+}
+
+showMessage2();
+// "기본값"
+
+// 기본값을 설정하는 다른 방법3 (nullish 연산자)
+function showMessage3(text) {
+  text = text ?? "기본값";
+  console.log(text);
+}
+
+showMessage3();
+// "기본값"
+```
+
+> **반환값**
+
+- 함수를 호출했을 때, 특정 값을 반환하게 할 수 있다
+- return value
+
+```js
+function sum(a, b) {
+  return a + b;
+}
+
+let result = sum(1, 2);
+console.log(result); // 1 + 2 = 3
+```
+
+- 함수가 내부에서 **return** 문을 만나게 되면 함수실행은 즉시 중단되고, 값을 반환
+
+```js
+function checkAge(age) {
+  if (age >= 18) {
+    return true;
+  } else {
+    return confirm("보호자 동의 받음?");
+  }
+}
+
+let age = prompt("당신의 나이를 기입하셈");
+
+if (checkAge(age)) {
+  console.log("접속 허용");
+} else {
+  console.log("접속 차단");
+}
+```
+
+```js
+/**
+ * return 만 명시되어 있거나, 본문이 비어있는 함수는 undefined 를 반환
+ */
+function test1() {
+  /**empty */
+}
+
+console.log(test1()); // undefined
+
+function test2() {
+  return;
+}
+
+console.log(test2()); // undefined
+```
+
+> **함수 이름짓기**
+
+- 함수 이름에 대한 기본적인 룰
+
+  1. 함수는 어떤 **동작** 을 수행하기 위해 코드를 모아놓은 곳
+  2. 따라서 함수의 이름은 대개 동사이다
+  3. 함수이름은 가능한 간결하고 명확해야 한다
+  4. **함수가 어떤동작을 하는지 이름에서 내포하고 있어야 한다**
+  5. 코드를 읽는 사람이 함수이름만 봐도 어떤동작을 하는지 유추가능해야 좋다
+
+<br>
+
+- 접두어를 사용하여 명확하게 함수이름을 표현할 수 있다
+
+  - get : ~ 값을 반환
+  - calc : ~ 의 값을 계산 후 반환
+  - create : ~ 무언가를 생성함
+  - check : ~ 무언가를 확인하고 Boolean 값을 반환
+
+> 함수의 동작 룰
+
+- 함수는 동작 하나만 담당해야 한다
+- 독립접인 두개의 동작은 독립된 함수 두개에 나눠서 수행되어야 한다
+
+> > - getAge 함수는 나이를 얻어오는 동작만 수행해야 합니다. alert 창에 나이를 출력해 주는 동작은 이 함수에 들어가지 않는 것이 좋습니다.
+
+> > - createForm 함수는 form을 만들고 이를 반환하는 동작만 해야 합니다. form을 문서에 추가하는 동작이 해당 함수에 들어가 있으면 좋지 않습니다.
+
+> > - checkPermission 함수는 승인 여부를 확인하고 그 결과를 반환하는 동작만 해야 합니다. 승인 여부를 보여주는 메시지를 띄우는 동작이 들어가 있으면 좋지 않습니다.
+
+<br>
+
+> **함수 == 주석**
+
+- 함수는 간결하고, 한가지 기능만을 수행할 수 있게 만들어야 한다
+- 함수가 길어지는 것은 함수를 잘게 쪼갤때가 되었다는 신호!
+- 함수를 분리해 작성하면, 많은 장점이 있다
+- 함수를 간결하게 만들면, 테스트와 디버깅이 쉬워진다, 또한 함수 자체로 주석의 역할까지 한다.
+
+```js
+// 레이블을 이용하여 함수 하나에 소수판별 및 소수 출력
+function showPrime(n) {
+  nextPrime: for (let i = 2; i < n; i++) {
+    for (let j = 2; j < i; i++) {
+      if (i % j === 0) continue nextPrime;
+    }
+    console.log(i); //소수 출력
+  }
+}
+// showPrime 함수 하나에 소수 판별 / 소수 출력 두 기능을 작성
+```
+
+```js
+// 소수 출력 함수 showPrime
+// 소수 판별 함수 isPrime
+
+function showPrime(n) {
+  for (let i = 2; i < n; i++) {
+    if (!isPrime(i)) continue; // 소수가 아니면 continue
+
+    console.log(i); //소수 출력
+  }
+}
+
+function isPrime(n) {
+  for (let i = 2; i < n; i++) {
+    if (n % i == 0) return false;
+  }
+  return true; //소수 판별
+}
+```

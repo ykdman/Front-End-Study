@@ -18,5 +18,5 @@ name = "John";
 admin = name;
 
 // 4.
-alert(admin);
+//alert(admin);
 // console.log(admin);
