@@ -1172,3 +1172,185 @@ function isPrime(n) {
   return true; //소수 판별
 }
 ```
+
+## 함수 표현식
+
+- JS 는 함수를 특별한 종류의 **값** 으로 취급
+
+> 함수 표현식을 통한 함수 선언
+
+```js
+// 기본 함수 선언
+function sayHi() {
+  console.log("Hi");
+}
+
+// 함수 표현식을 이용한 함수 선언
+let sayHi = function () {
+  console.log("Hi~");
+}; //함수 표현식 선언은 변수 선언과 같이 선언하기 때문에 끝에 ; 이 위치
+
+// 함수 호출
+
+// 1. 괄호를 쓰지 않는 호출
+console.log(sayHi);
+// 괄호를 사용하지 않고 호출한 함수는, 함수내부의 코드가 값으로써 출력
+
+// 2. 괄호를 사용한 호출
+console.log(sayHi());
+// 괄호를 사용한 함수 호출은 값이 아닌 함수의 동작 반환 값을 출력
+```
+
+> JS 에서 함수는 **값** 이다
+
+- **JS 에서 함수는 값이기 때문에, 값에 할수있는 일을 함수에도 할수있다**
+- **함수는 '동작' 을 나타내는 '값' 이다!**
+
+```js
+function sayHi() {
+  // (1) 함수 생성
+  console.log("Hi~!");
+}
+
+let func = sayHi; // (2) 함수 복사
+
+func(); // (3) 복사한 함수 실행, (정상실행 됨)
+sayHi(); //본래 함수 실행(정상실행 됨)
+```
+
+> **콜백 함수**
+
+- 함수를 값으로써 인자값에 전달하여 사용
+
+```js
+function ask(question, yes, no) {
+  //인자 기억! question, yes, no
+  if (confirm(question)) yes(); //인자로 전달된 yes를 함수 동작함
+  else no(); // 인자로 전달된 no 를 함수 동작함
+}
+
+function showOk() {
+  console.log("동의했슴둥");
+}
+
+function showCancel() {
+  console.log("취소 하였슴둥...");
+}
+
+// 콜백 함수 사용
+
+ask("동의합니까?", showOk, showCancel);
+// 함수 showOk 와 showCancel이 ask 함수의 인자로 전달됨!
+```
+
+- 함수를 다른 함수의 인수로 전달하고, 전달한 함수를 '나중에 호출!' = Call Back 함수
+
+> 함수 표현식 vs 함수 선언문
+
+- 함수 선언문 : 주요 코드 흐름 중간에 독자적인 구문으로 존재
+
+  ```js
+  // 함수 선언문
+  function sum(a, b) {
+    return a + b;
+  }
+  ```
+
+- 함수 표현식 : 함수는 표현식이나 구문 구성(syntax construct) 내부에 생성됨
+
+  ```js
+  let sum = function (a, b) {
+    return a + b;
+  };
+  ```
+
+  > > JS의 함수 생성 시기
+
+  1.  함수 표현식
+
+      - 실제 실행 흐름이 해당 함수 표현식에 도달 했을 때, 함수를 생성
+      - 실행 흐름이 해당 함수 표현식에 도달했을 때 부터, 함수를 사용할수 있다.
+
+  2.  함수 선언문
+
+      - **함수 선언문은 함수 선언문이 정의 되기 전에도 호출할 수 있다**
+      - **JS에서 함수 선언문은 JS를 실행하기전 준비단계에서 전역에 선언된 함수 선언문을 찾고, 해당함수를 생성한다**
+      - **스크립트가 진짜 실행되기 전, '초기화 단계'에서 함수 선언 방식으로 정의한 함수가 생성되는 것**
+      - 따라서 함수선언문으로 선언된 함수는, 선언 위치에 상관없이 어디서든 호출이 가능하다
+
+  ```js
+  // 함수 선언문
+
+  sayHi("John"); // Hello John
+
+  function sayHi(name) {
+    console.log(`Hello ${name}`);
+  }
+  ```
+
+  ```js
+  // 함수 표현식
+
+  sayHi("Ahn"); // Error !!!
+
+  let sayHi = function (name) {
+    console.log(`Hello ${name}`);
+  };
+  ```
+
+> 스코프로 보는 함수
+
+- 함수 선언문
+
+```js
+/**
+ * 엄격 모드에서 함수선언문이 코드블록내에 위치하면 해당 함수는 블록내 어디에서든지 접근 가능
+ 하지만, 블록 밖에서는 접근할 수 없다.
+ */
+let age = prompt("나이는?", 18);
+
+if (age < 18) {
+  function welcome() {
+    console.log("안녕");
+  }
+} else {
+  function welcome() {
+    console.log("안녕하세요");
+  }
+}
+
+welcome(); // Error !!! : welcome is not defined
+/**
+ * 함수 선언문은 함수가 선언된 코드블록 (위에서는 if 구문)에서만 유효하므로, 밑의 전역에서 welcome()을 호출할 수 없다!
+ 하지만 if 구문 안에서는 welcome함수가 선언된 블록이기 때문에 호출 가능하다
+ */
+```
+
+- 함수 표현식
+
+```js
+let age = prompt("나이는?", 18);
+
+let welcome; // 미리 전역에 값을 Init
+
+if (age < 18) {
+  welcome = function () {
+    console.log("안녕");
+  };
+} else {
+  welcome = function () {
+    console.log("안녕하세요");
+  };
+}
+
+welcome(); // 제대로 동작!
+```
+
+> 함수 표현식과 함수 선언문의 선택
+
+    제 경험에 따르면 함수 선언문을 이용해 함수를 선언하는 걸 먼저 고려하는 게 좋습니다. 함수 선언문으로 함수를 정의하면, 함수가 선언되기 전에 호출할 수 있어서 코드 구성을 좀 더 자유롭게 할 수 있습니다.
+
+    함수 선언문을 사용하면 가독성도 좋아집니다. 코드에서 let f = function(…) {…}보다 function f(…) {…} 을 찾는 게 더 쉽죠. 함수 선언 방식이 더 “눈길을 사로잡습니다”.
+
+    그러나 어떤 이유로 함수 선언 방식이 적합하지 않거나, (위 예제와 같이) 조건에 따라 함수를 선언해야 한다면 함수 표현식을 사용해야 합니다.
+    - JS INFO -
