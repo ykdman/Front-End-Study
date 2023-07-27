@@ -1354,3 +1354,35 @@ welcome(); // 제대로 동작!
 
     그러나 어떤 이유로 함수 선언 방식이 적합하지 않거나, (위 예제와 같이) 조건에 따라 함수를 선언해야 한다면 함수 표현식을 사용해야 합니다.
     - JS INFO -
+
+## 화살표 함수 기본
+
+```js
+let func = (arg1, arg2, arg3) => expression;
+```
+
+```js
+let sum = (a, b) => a + b;
+
+// let sum = function (a, b) {
+//   return a + b;
+// }
+```
+
+```js
+// 동적 화살표 함수
+let age = prompt("나이를 알려주세요");
+
+let welcome = age < 18 ? () => alert("안녕") : () => alert("안녕하세요!");
+
+welcome();
+```
+
+```js
+// 본문이 여러 줄인 화살표 함수
+
+let sum = (a, b) => {
+  let result = a + b;
+  return result;
+};
+```
