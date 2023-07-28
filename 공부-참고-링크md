@@ -1,0 +1,494 @@
+# 개발 공부 참고용 링크 모음
+
+## 출처
+
+<https://velog.io/@pastelblue0721/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EC%9E%85%EB%AC%B8%EC%9E%90%EB%93%A4%EC%97%90%EA%B2%8C-%EC%A2%8B%EC%9D%80-%EB%A7%81%ED%81%AC-%EB%AA%A8%EC%9D%8C-React-%EC%9C%84%EC%A3%BC>
+
+## 로드맵
+
+> 2022 웹 개발 로드맵
+
+- <https://www.youtube.com/watch?v=TTLHd3IyErM&ab_channel=%EB%93%9C%EB%A6%BC%EC%BD%94%EB%94%A9>
+
+> 프론트 엔드 로드맵
+
+- <https://github.com/adam-golab/react-developer-roadmap/blob/master/README-KO.md>
+
+> 프론트엔드 백엔드란 무엇인가? | 클라이언트 서버란 무엇인가? | 초보자를위한 쉬운 개념정리
+
+- <https://www.youtube.com/watch?v=aXi1H_4ncvs&ab_channel=%EC%A7%90%EC%BD%94%EB%94%A9%EC%9D%98CODINGGYM>
+
+> 프론트엔드 개발자 학습 방향
+
+- <https://www.youtube.com/watch?v=02RCNUF-2Vw&t=2061s&ab_channel=poiemaweb>
+
+> 라이브러리 / 프레임워크 차이 - 노마드 코더
+
+- <https://www.youtube.com/watch?v=t9ccIykXTCM&ab_channel=%EB%85%B8%EB%A7%88%EB%93%9C%EC%BD%94%EB%8D%94NomadCoders>
+
+## HTML
+
+> 헷갈리는 HTML 태그 정리 (시맨틱 태그 모음)
+
+- <https://www.youtube.com/watch?v=T7h8O7dpJIg&ab_channel=%EB%93%9C%EB%A6%BC%EC%BD%94%EB%94%A9>
+
+> MDN - HTML
+
+## CSS
+
+> CSS Flexbox 완전정리
+
+- <https://www.youtube.com/watch?v=7neASrWEFEM&ab_channel=%EB%93%9C%EB%A6%BC%EC%BD%94%EB%94%A9>
+
+> CSS 학습 사이트
+
+- <https://web.dev/learn/css/>
+
+> MDN - CSS Attributes
+
+- <https://developer.mozilla.org/ko/docs/Web/CSS>
+
+> 반드시 기억해야 하는 CSS 선택자
+
+## CSS 프레임워크
+
+> 부트스트랩
+
+- <https://getbootstrap.kr/docs/5.1/components/card/>
+
+> Sass 이론 정리 블로그
+
+- <https://heropy.blog/2018/01/31/sass/>
+
+> TailWind Official Site
+
+- <https://tailwindcss.com/>
+
+> 공식 템플릿 사이트, TailWindUI
+
+- <https://tailwindui.com/?ref=top>
+
+## CSS 프레임워크 For React !
+
+> Styled-Components (블로그)
+
+- <https://react.vlpt.us/styling/03-styled-components.html>
+
+> React 부트스트랩 공식
+
+- <https://react-bootstrap.github.io/components/alerts>
+
+## HTML / CSS 애니메이션 생성기
+
+> Webcode.tools
+
+- <https://webcode.tools/>
+
+> html-code-generator
+
+- <https://www.html-code-generator.com/>
+
+> uiverse
+
+- <https://uiverse.io/>
+
+## 브라우저 (DOM)
+
+- <https://developer.mozilla.org/ko/docs/Web/HTML>
+
+> 브라우저는 어떻게 동작 하는가
+
+- <https://d2.naver.com/helloworld/59361>
+
+> DOM 은 무엇이고 가상DOM은 무엇인가
+
+- <https://www.youtube.com/watch?v=1ojA5mLWts8&ab_channel=%EC%96%84%ED%8C%8D%ED%95%9C%EC%BD%94%EB%94%A9%EC%82%AC%EC%A0%84>
+
+> MDN - DOM
+
+- <https://developer.mozilla.org/ko/docs/Web/API/Document_Object_Model/Introduction>
+
+## Javascript
+
+> JS Info
+
+- <https://ko.javascript.info/>
+
+> 바닐라 JS로 크롬앱 만들기
+
+- <https://nomadcoders.co/javascript-for-beginners/lobby>
+
+> ES2021 JS 강좌 (제로초 유튜브)
+
+- <https://www.youtube.com/watch?v=2yGhb-z8VTQ&list=PLcqDmjxt30RvEEN6eUCcSrrH-hKjCT4wt&index=1&ab_channel=ZeroChoTV>
+
+> 시나브로 Javascript (유료!)
+
+- <https://t.co/VLBlqgdT8e>
+
+> 벨로퍼트와 함께하는 모던 자바스크립트 튜토리얼
+
+- <https://learnjs.vlpt.us/>
+
+> JS 알고리즘 및 자료구조 (github)
+
+- <https://github.com/trekhleb/javascript-algorithms/blob/master/README.ko-KR.md>
+
+> ES6+ 변경점 간단 정리
+
+- <https://velog.io/@kimhscom/JavaScript-%EC%9E%90%EC%A3%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-ES6-%EB%AC%B8%EB%B2%95-%EC%A0%95%EB%A6%AC>
+
+## HTML + CSS + JS Web Create
+
+> 왕초보를 위한 HTML, CSS 웹개발 입문 (인프런)
+
+- <https://www.inflearn.com/course/%EC%99%95%EC%B4%88%EB%B3%B4-%EC%9B%B9%EA%B0%9C%EB%B0%9C-%EC%9E%85%EB%AC%B8>
+
+> 제대로 파는 HTML CSS 강좌 - 웹개발 퍼블리싱 끝장내기 (유튭)
+
+- <https://www.youtube.com/watch?v=TrC2x4N0XqY&ab_channel=%EC%96%84%ED%8C%8D%ED%95%9C%EC%BD%94%EB%94%A9%EC%82%AC%EC%A0%84>
+
+> 포트폴리오 웹사이트 만들어 보기 (영어, 유튜브)
+
+- <https://www.youtube.com/watch?v=xV7S8BhIeBo&ab_channel=freeCodeCamp.org>
+
+## Git, Github
+
+> Git 끝장내기
+
+- <https://www.youtube.com/watch?v=1I3hMwQU6GU&ab_channel=%EC%96%84%ED%8C%8D%ED%95%9C%EC%BD%94%EB%94%A9%EC%82%AC%EC%A0%84>
+
+> Git, Github 제대로 배우기
+
+- <https://www.youtube.com/watch?v=Z9dvM7qgN9s&ab_channel=%EB%93%9C%EB%A6%BC%EC%BD%94%EB%94%A9>
+
+> 깃 커맨드 연습 가능한 사이트
+
+- <https://learngitbranching.js.org/?locale=ko>
+
+> Github README 꾸미기 총정리
+
+- <https://velog.io/@seondal/Github-Readme-%EA%BE%B8%EB%AF%B8%EA%B8%B0-%EC%B4%9D%EC%A0%95%EB%A6%AC>
+
+> 마크다운 (MD) 사용법
+
+- <https://gist.github.com/ihoneymon/652be052a0727ad59601>
+
+## React
+
+> React 공식 사이트
+
+- <https://ko.react.dev/>
+
+> 노마드코더 React 강의기초
+
+- <https://nomadcoders.co/react-for-beginners>
+
+> React Hook 완벽 정복하기
+
+- <https://velog.io/@velopert/react-hooks>
+
+> React + Express를 이용한 웹 어플리케이션 개발하기 (인프런)
+
+- <https://www.inflearn.com/course/react-%EA%B0%95%EC%A2%8C-velopert>
+
+> 벨로퍼트와 함께하는 모던 React
+
+- <https://react.vlpt.us/>
+
+## React 상태관리
+
+> React 에서 상태관리 하기
+
+- <https://mingule.tistory.com/74>
+
+> Redux에 대한 이론 (블로그)
+
+- <https://velog.io/@mingsomm/%EB%A6%AC%EC%95%A1%ED%8A%B8%EC%9D%98-%EC%83%81%ED%83%9C%EA%B4%80%EB%A6%AC-redux-%ED%8E%B8>
+
+> 초보자를 위한 Redux101 (노마드코더)
+
+- <https://nomadcoders.co/redux-for-beginners>
+
+> 생활코딩 - Redux
+
+- <https://www.youtube.com/watch?v=Jr9i3Lgb5Qc&list=PLuHgQVnccGMB-iGMgONoRPArZfjRuRNVc&ab_channel=%EC%83%9D%ED%99%9C%EC%BD%94%EB%94%A9>
+
+## Next.js
+
+> 서버사이트 렌더링 이론 (유튭)
+
+- <https://www.youtube.com/watch?v=iZ9csAfU5Os&ab_channel=%EB%93%9C%EB%A6%BC%EC%BD%94%EB%94%A9>
+
+> 노마드코더 Next.js 기초 강의
+
+- <https://nomadcoders.co/nextjs-fundamentals>
+
+> Next.js 기초 블로그
+
+- <https://kyounghwan01.github.io/blog/React/next/basic/#next-js%E1%84%80%E1%85%A1-%E1%84%8C%E1%85%A6%E1%84%80%E1%85%A9%E1%86%BC%E1%84%92%E1%85%A1%E1%84%82%E1%85%B3%E1%86%AB-%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%AD-%E1%84%80%E1%85%B5%E1%84%82%E1%85%B3%E1%86%BC>
+
+> Udemy - Next.js 완벽 정복 가이드
+
+- <https://www.udemy.com/course/nextjs-react-incl-two-paths/>
+
+## TypeScript (TS)
+
+> 노마드코더 TS 이론
+
+- <https://www.youtube.com/watch?v=8YIwaO6Cojw&ab_channel=%EB%85%B8%EB%A7%88%EB%93%9C%EC%BD%94%EB%8D%94NomadCoders>
+
+> TS로 블록체인 만들기
+
+- <https://nomadcoders.co/typescript-for-beginners>
+
+> TS 핸드북 (블로그, 이론)
+
+- <https://typescript-kr.github.io/pages/basic-types.html>
+
+## GraphQL
+
+> 노마드코더 유튭, GraphQL 이론
+
+- <https://www.youtube.com/watch?v=N-81mS2vldI&ab_channel=%EB%85%B8%EB%A7%88%EB%93%9C%EC%BD%94%EB%8D%94NomadCoders>
+
+> 얄팍한 GrapthQl과 Apollo
+
+- <https://www.inflearn.com/course/%EC%96%84%ED%8C%8D%ED%95%9C-graphql-apollo>
+
+> 노마드코더 GraphQL 로 영화 API 만들기
+
+- <https://nomadcoders.co/graphql-for-beginners>
+
+> 노마드코더 GraphQL로 영화 웹 앱 만들기
+
+- <https://nomadcoders.co/react-graphql-for-beginners>
+
+## JS 사이드 프로젝트 추천 모음
+
+> 초보자를 위한 40가지 자바스크립트 프로젝트
+
+- <https://www.freecodecamp.org/korean/news/javascript-projects-for-beginners/>
+
+> 당신의 사이드 프로젝트를 위한 10가지 팁
+
+- <https://velog.io/@chris/10-tips-for-starting-and-creating-side-projects>
+
+## 기타 유용한 사이트 모음
+
+> 메타태그 이론
+
+- <https://wormwlrm.github.io/2022/05/30/8-Meta-tags-for-unfurling-links-well-on-Slack.html>
+
+> 웹 프론트엔드 개발자 어떻게 준비해야 할까 (블로그)
+
+- <https://medium.com/codesquad-kr/%EC%9B%B9-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%A4%80%EB%B9%84%ED%95%B4%EC%95%BC-%ED%95%A0%EA%B9%8C-5ac7bb6ff2a9>
+
+> 실용주의 프론트엔드 개발
+
+- <https://peter-cho.gitbook.io/book/>
+
+> 함수형 프로그래밍과 ES6+ (유튭)
+
+- <https://www.youtube.com/watch?v=4sO0aWTd3yc&ab_channel=naverd2>
+
+> 고퀄리티 개발 컨텐츠 모음 (github)
+
+- <https://github.com/Integerous/goQuality-dev-contents>
+
+> TOAST UI 문서, 개발 이론
+
+- <https://ui.toast.com/fe-guide/ko>
+
+> 정규식 (RegEx) 간편하게 생성
+
+- <https://regexr.com/>
+
+## CS 지식
+
+> PS를 공부하는 뉴비들을 위한 안내서
+
+- <https://anz1217.tistory.com/147>
+
+> 운영체제 공룡책 강의 (인프런)
+
+- <https://www.inflearn.com/course/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C-%EA%B3%B5%EB%A3%A1%EC%B1%85-%EC%A0%84%EA%B3%B5%EA%B0%95%EC%9D%98>
+
+## 면접, 이력서
+
+> 개발자 면접 준비 github 1
+
+- 출처글 저작권자 분의 깃허브 면접 관련 정리
+- <https://cocoon1787.tistory.com/668>
+
+> 웹 FE개발자 아무것도 모르는 상태에서 취업까지 (라매개발자 유튭)
+
+- <https://www.youtube.com/watch?v=YbVuqWD12Ko&ab_channel=%EB%9D%BC%EB%A7%A4%EA%B0%9C%EB%B0%9C%EC%9E%90>
+
+> 취준생이 반드시 알아야 할 FE 지식들
+
+- <https://github.com/baeharam/Must-Know-About-Frontend>
+
+> 개발자 이력서 작성하기
+
+- <https://wonny.space/writing/work/engineer-resume>
+
+## 웹/앱 디자인 UI, UX
+
+> MadiaDesigner (유튜버)
+
+- <https://www.youtube.com/c/MadiaDesigne>
+
+> 웹 최적화 방식 모음 - UX 트릭
+
+- <https://black7375.tistory.com/80>
+
+> 색상 팔렛트 추천 (ColorHunt)
+
+- <https://colorhunt.co/>
+
+> Meterial Design
+
+- <https://material.io/components/app-bars-bottom>
+
+> Meterial Color
+
+- <https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=81D4FA>
+
+> uiverse
+
+- html css 요소들 다량 보유
+- https://uiverse.io/
+
+> 반응형 디자인 이론 (블로그)
+
+- https://hello-woody.tistory.com/8
+
+## 폰트 / 아이콘
+
+> 눈누폰트
+
+- <https://noonnu.cc/>
+
+> hero icons
+
+- <https://heroicons.com/>
+
+> ion icons
+
+- <https://ionic.io/ionicons>
+
+## 개발자 플랫폼
+
+> 요즘 IT
+
+- <https://yozm.wishket.com/magazine/>
+
+> 개발자 행사 정리 (공식)
+
+- <https://dev-event.vercel.app/events>
+
+## 좋은 유튜브
+
+- 노마드코더
+
+- 개발자의품격
+
+- 코딩애플
+
+- 널널한개발자
+
+- 드림코딩
+
+- 생활 코딩
+
+- 얄팍한 코딩사전
+
+- 우아한-Tech
+
+## HTML CSS Js로만 페이지를 만들어보는 유튜브 강의 (영어)
+
+<p><a href="https://www.youtube.com/c/Freecodecamp">freeCodeCamp.org</a></p>
+    <p><a href="https://www.youtube.com/c/JulioCodes">Julio Codes</a></p>
+    <p><a href="https://www.youtube.com/kepowob/videos">Kevin Powell</a></p>
+    <p>
+      <a href="https://www.youtube.com/c/TraversyMedia/videos"
+        >Traversy Media</a
+      >
+
+## React를 사용하여 페이지를 만들어보는 유튜브 강의 (영어)
+
+<p>
+      <a href="https://www.youtube.com/channel/UCmT9TwcIb_yAe7-Uqhn3fBA"
+        >Code Commerce</a
+      >
+    </p>
+    <p><a href="https://www.youtube.com/c/DevEd/videos">Dev Ed</a></p>
+    <p><a href="https://www.youtube.com/c/Fireship">Fireship</a></p>
+    <p><a href="https://www.youtube.com/c/Freecodecamp">freeCodeCamp.org</a></p>
+    <p>
+      <a href="https://www.youtube.com/c/JavaScriptMastery"
+        >JavaScript Mastery</a
+      >
+    </p>
+    <p><a href="https://www.youtube.com/c/Academind/videos">Academind</a></p>
+    <p><a href="https://www.youtube.com/c/LamaDev/videos">Lama Dev</a></p>
+    <p>
+      <a href="https://www.youtube.com/c/TheNetNinja/videos">The Net Ninja</a>
+    </p>
+
+## 개발 도서 추천
+
+<p>
+      <a
+        href="https://digital.kyobobook.co.kr/digital/ebook/ebookDetail.ink?selectedLargeCategory=001&amp;ejkGb=EBK&amp;barcode=4808966263462"
+        >자바스크립트 완벽 가이드</a
+      >
+    </p>
+    <p>
+      <a
+        href="https://digital.kyobobook.co.kr/digital/ebook/ebookDetail.ink?selectedLargeCategory=001&amp;ejkGb=EBK&amp;barcode=4801162242743"
+        >리팩터링</a
+      >
+    </p>
+    <br />
+    <h2 id="개발론">개발론</h2>
+    <p>
+      <a
+        href="https://digital.kyobobook.co.kr/digital/ebook/ebookDetail.ink?selectedLargeCategory=001&amp;ejkGb=EBK&amp;barcode=4801158391745"
+        >개발자의 글쓰기</a
+      >
+    </p>
+    <p>
+      <a
+        href="https://digital.kyobobook.co.kr/digital/ebook/ebookDetail.ink?selectedLargeCategory=001&amp;ejkGb=EBK&amp;barcode=4808966261253"
+        >CODE</a
+      >
+    </p>
+    <p>
+      <a
+        href="http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;ejkGb=KOR&amp;linkClass=330202&amp;barcode=9788966260959"
+        >Clean Code(클린 코드)</a
+      >
+    </p>
+    <p>
+      <a href="http://www.yes24.com/product/goods/113463430">IT 5분 잡학사전</a>
+    </p>
+    <p>
+      <a href="http://www.yes24.com/product/goods/112033924"
+        >데이터 중심 애플리케이션 설계</a
+      >
+    </p>
+    <p>
+      <a href="https://www.conventionalcommits.org/ko/v1.0.0/"
+        >깃허브 커밋 컨벤션</a
+      ><br />
+      <br />
+    </p>
+    <h2 id="디자인">디자인</h2>
+    <p>
+      <a
+        href="https://digital.kyobobook.co.kr/digital/ebook/ebookDetail.ink?selectedLargeCategory=001&amp;ejkGb=EBK&amp;barcode=4801160508520"
+        >버려지는 디자인 통과되는 디자인: 웹&amp;앱디자인
+      </a>
+    </p>
