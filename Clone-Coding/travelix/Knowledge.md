@@ -69,6 +69,42 @@ div a {
 - transform : 변형
 - scale : 크기변경, scale(x,y) 인수를 받으며, 1은 크기그대로, 2부터 2배를 받고 0은 완전히 화면상에서 지운다
 
+> ::before , ::after
+
+- 가상요소
+- 일반적인 CSS 선택자 로는 지정할수 없는 미세한 영역을 선택하기 위해 사용됨
+
+  ![Alt text](./knowledge-Img/image.png)
+
+```css
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  background-color: var(--purple-transparent-alt);
+  z-index: -1;
+}
+```
+
+```
+<div class="hero">
+::before
+-------contents
+::after
+</div>
+```
+
+> resize
+
+- resize는 form이나 label, select 같은 요소를 사용자가 resizing 할 수있는지의 여부와 resize 방향에 대한 정의를 위해 사용
+- none, horizontal, vertical , both 등등으로 사용 가능
+- none 일 때는, 사용자가 input 요소의 사이즈를 조정할 수 없다
+
+- 위와 같은 스타일, 컨텐츠, 요소 자체를 지정한 엘리먼트의 앞 뒤에 배치 할 수 있다
+
 ## JS
 
 > classList.toggle
