@@ -109,6 +109,11 @@ div a {
 
 - grid 알아보기
 
+> position
+
+- relative : 자기 자신을 위치의 기준으로 삼음
+- absoulute : 부모요소를 위치의 기준으로 삼음 (static이 아닌 부모를 찾을 때까지 위로 타고 올라감)
+
 ## JS
 
 > classList.toggle
