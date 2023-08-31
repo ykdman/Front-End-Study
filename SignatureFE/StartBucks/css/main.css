@@ -12,9 +12,17 @@ img {
   display: block;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* HEADER */
 header {
-  background-color: royalblue;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #f6f5f0;
+  border-bottom: 1px solid #c8c8c8;
 }
 
 header .inner {
@@ -22,7 +30,6 @@ header .inner {
   width: 1100px;
   height: 120px;
   margin: 0 auto;
-  background-color: orange;
 }
 
 header .logo {
@@ -34,4 +41,91 @@ header .logo {
   bottom: 0;
   left: 0;
   margin: auto;
+}
+
+/* Header Sub-Menu */
+header .sub-menu {
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  display: flex;
+}
+
+header .sub-menu ul.menu {
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+
+header .sub-menu ul.menu li {
+  position: relative;
+}
+
+header .sub-menu ul.menu li::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 12px;
+  background-color: #e5e5e5;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+header .sub-menu ul.menu li:first-child::before {
+  /* 첫번째 Sub-Menu ul.menu li의 첫번째 li요소의 가상요소 before 를 추가하는 원리 */
+  /* 첫번째 구분선 지우기 */
+  display: none;
+}
+
+header .sub-menu ul.menu li a {
+  font-size: 13px;
+  padding: 11px 16px;
+  display: block;
+  color: #656565;
+}
+header .sub-menu ul.menu li a:hover {
+  color: #000;
+}
+
+header .sub-menu .search {
+  height: 34px;
+  position: relative;
+}
+
+header .sub-menu .search input {
+  width: 36px;
+  height: inherit;
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+  outline: none;
+  background-color: #fff;
+  color: #777;
+  font-size: 12px;
+  transition: width 0.4s;
+}
+
+header .sub-menu .search input:focus {
+  width: 190px;
+  border-color: #669900;
+  transition: width 0.4s;
+}
+
+header .sub-menu .search .material-icons {
+  position: absolute;
+  /* material-icons 의 제공되는 높이 */
+  height: 24px;
+  top: 0;
+  bottom: 0;
+  right: 5px;
+  margin: auto;
+  transition: 0.4s;
+}
+
+header .sub-menu .search.focused .material-icons {
+  /* search Icon의 투명도를 최대로 */
+  opacity: 0;
+  transition: 0.4s;
 }
