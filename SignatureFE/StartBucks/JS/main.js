@@ -59,3 +59,28 @@ const swiper = new Swiper(".notice-line .swiper-container", {
   autoplay: true,
   loop: true,
 });
+
+// Promotion Swiper
+
+const promotionSwiper = new Swiper(".promotion .swiper-container", {
+  direction: "horizontal", // 슬라이드 방향
+  slidesPerView: 3, // 한번에 보여줄 슬라이드의 개수
+  spaceBetween: 10, // 슬라이드 사이 여백 (px)
+  centeredSlides: true, // 1번 슬라이드가 가운데 보이기
+  loop: true, // 슬라이드 반복 재생
+  autoplay: {
+    delay: 5000, // 슬라이드 자동 재생 지연시간 (ms , 기본 : 3000)
+  },
+
+  //pagenation
+  pagination: {
+    el: ".promotion .swiper-pagination", // 페이지 번호 요소 선택자
+    clickable: true,
+  },
+
+  // navigation arrow
+  navigation: {
+    prevEl: ".promotion .swiper-prev",
+    nextEl: ".promotion .swiper-next",
+  },
+});
