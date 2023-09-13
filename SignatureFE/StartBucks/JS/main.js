@@ -84,3 +84,11 @@ const promotionSwiper = new Swiper(".promotion .swiper-container", {
     nextEl: ".promotion .swiper-next",
   },
 });
+
+// Promotion Toggle
+const promotionEl = document.querySelector(".promotion");
+const promotionToggleBtnEl = document.querySelector(".toggle-promotion");
+
+promotionToggleBtnEl.addEventListener("click", function () {
+  promotionEl.classList.toggle("hide");
+});

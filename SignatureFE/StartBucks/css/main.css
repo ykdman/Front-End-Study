@@ -453,6 +453,13 @@ header .badges .badge {
   position: relative;
   height: 693px;
   background-color: #f6f5ef;
+  transition: height 0.4s;
+  /* toggle 로 인해  남아있는 부분을 hidden 처리*/
+  overflow: hidden;
+}
+
+.notice .promotion.hide {
+  height: 0;
 }
 
 .notice .promotion .swiper-container {
@@ -540,4 +547,55 @@ header .badges .badge {
 .notice .promotion .swiper-prev:hover {
   background-color: #333;
   color: #fff;
+}
+
+/* REWARDS */
+
+.rewards {
+  position: relative;
+}
+
+.rewards .bg-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #272727;
+}
+
+.rewards .bg-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #d5c798;
+}
+
+.rewards .inner {
+  background-image: url("../images/rewards.jpg");
+  height: 241px;
+}
+
+.rewards .btn-group {
+  width: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  right: 0;
+  bottom: 24px;
+}
+
+.rewards .btn-group .btn.sign-up {
+  margin-right: 10px;
+}
+
+.rewards .btn-group .btn.sign-in {
+  width: 110px;
+}
+
+.rewards .btn-group .btn.gift {
+  margin-top: 10px;
+  flex-grow: 1; /* flex 안에서 최대의 넓이 사용 */
 }
