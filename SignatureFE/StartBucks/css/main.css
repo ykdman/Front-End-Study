@@ -5,7 +5,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.4;
-  font-family: "Nanum Gothic", sans-serif;
+  font-family: 'Nanum Gothic', sans-serif;
 }
 
 img {
@@ -124,7 +124,7 @@ header .sub-menu ul.menu li {
 }
 
 header .sub-menu ul.menu li::before {
-  content: "";
+  content: '';
   display: block;
   width: 1px;
   height: 12px;
@@ -259,7 +259,7 @@ header .main-menu .item .item__contents .contents__menu > ul > li ul li:hover {
 }
 
 header .main-menu .item .item__contents .contents__texture {
-  background-image: url(../images/main_menu_pattern.jpg);
+  background-image: url('../images/main_menu_pattern.jpg');
   padding: 26px 0;
   font-size: 12px;
 }
@@ -294,7 +294,7 @@ header .badges .badge {
 .visual {
   /* header 의 높이 만큼 Margin */
   margin-top: 120px;
-  background: url("../images/visual_bg.jpg");
+  background: url('../images/visual_bg.jpg');
   background-position: center;
 }
 .visual .inner {
@@ -499,7 +499,7 @@ header .badges .badge {
 }
 
 .notice .promotion .swiper-pagination .swiper-pagination-bullet {
-  background-image: url("../images/promotion_slide_pager.png");
+  background-image: url('../images/promotion_slide_pager.png');
   width: 12px;
   height: 12px;
   margin-right: 6px;
@@ -512,7 +512,7 @@ header .badges .badge {
 }
 
 .notice .promotion .swiper-pagination .swiper-pagination-bullet-active {
-  background-image: url("../images/promotion_slide_pager_on.png");
+  background-image: url('../images/promotion_slide_pager_on.png');
 }
 
 .notice .promotion .swiper-next,
@@ -573,7 +573,7 @@ header .badges .badge {
 }
 
 .rewards .inner {
-  background-image: url("../images/rewards.jpg");
+  background-image: url('../images/rewards.jpg');
   height: 241px;
 }
 
@@ -618,7 +618,7 @@ header .badges .badge {
 }
 
 .youtube .youtube__area::before {
-  content: "";
+  content: '';
   display: block;
   width: 100%;
   height: 0;
@@ -626,7 +626,7 @@ header .badges .badge {
 }
 
 .youtube .youtube__cover {
-  background-image: url("../images/video_cover_pattern.png");
+  background-image: url('../images/video_cover_pattern.png');
   background-color: rgba(0, 0, 0, 0.3);
   position: absolute;
   top: 0;
@@ -659,8 +659,90 @@ header .badges .badge {
   left: 150px;
 }
 
-.youtube .floating3 {
+/* SEASON PRODUCT SECTION */
+.season-product {
+  background-image: url('../images/season_product_bg.jpg');
+}
+
+.season-product .inner {
+  height: 400px;
+}
+
+.season-product .floating3 {
   position: absolute;
-  bottom: -200px;
+  top: -200px;
   right: 0;
+}
+
+.season-product .text-group {
+  position: absolute;
+  top: 110px;
+  right: 100px;
+}
+
+.season-product .text-group .title {
+  margin-bottom: 10px;
+}
+
+.season-product .text-group .description {
+  margin-bottom: 15px;
+}
+
+.season-product .text-group .more {
+}
+
+/* RESERVE SECTION */
+
+.reserve-coffee {
+  background-image: url('../images/reserve_bg.jpg');
+}
+
+.reserve-coffee .inner {
+  height: 400px;
+}
+
+.reserve-coffee .reserve-logo {
+  position: absolute;
+  top: 110px;
+  left: 0;
+}
+
+.reserve-coffee .text-group {
+  position: absolute;
+  top: 124px;
+  left: 208px;
+}
+
+.reserve-coffee .product {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* PICK YOUR FAVORITE SECTION */
+.pick-your-favorite {
+  background-image: url('../images/favorite_bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.pick-your-favorite .inner {
+  padding: 110px 0;
+}
+
+.pick-your-favorite .text-group {
+  display: flex;
+  width: 362px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.pick-your-favorite .text-group .title {
+  margin-bottom: 40px;
+}
+
+.pick-your-favorite .text-group .description {
+  margin-bottom: 40px;
 }
