@@ -92,3 +92,25 @@ const promotionToggleBtnEl = document.querySelector(".toggle-promotion");
 promotionToggleBtnEl.addEventListener("click", function () {
   promotionEl.classList.toggle("hide");
 });
+
+// random value function
+function randomValue(min, max) {
+  return parseFloat((Math.random() * (max - min) + min).toFixed(2));
+}
+
+/** floating */
+function floatingObject(selector, delay, size) {
+  // gsap.to(요소, 시간, 옵션);
+  gsap.to(selector, randomValue(1.5, 2.5), {
+    // Option
+    y: size,
+    repeat: -1,
+    yoyo: true, // 한번 재생된 애니메이션을 다시 원위치 시킨다
+    ease: Power1.easeInOut,
+    delay: randomValue(0, delay),
+  });
+}
+
+floatingObject(".floating1", 1, 15);
+floatingObject(".floating2", 0.5, 15);
+floatingObject(".floating3", 1.5, 20);
