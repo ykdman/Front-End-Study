@@ -21,6 +21,7 @@ searchInputEl.addEventListener('blur', function () {
 
 // badge Scroll Down → Vanish
 const badgeEl = document.querySelector('header .badges');
+const scrollTop = document.querySelector('#to-top');
 window.addEventListener(
   'scroll',
   _.throttle(function () {
@@ -32,15 +33,28 @@ window.addEventListener(
         opacity: 0,
         display: 'none',
       });
+      // 버튼 보이기
+      gsap.to(scrollTop, 0.2, {
+        x: 0,
+      });
     } else {
       //배지 보이기
       gsap.to(badgeEl, 0.6, {
         opacity: 1,
         display: 'block',
       });
+      // 버튼 숨기기
+      gsap.to(scrollTop, 0.2, {
+        x: 100,
+      });
     }
   }, 300)
 );
+scrollTop.addEventListener('click', function () {
+  gsap.to(window, 0.7, {
+    scrollTo: 0,
+  });
+});
 // _.throttle(함수, 시간ms) lodash
 
 //  visual fade in
@@ -82,6 +96,19 @@ const promotionSwiper = new Swiper('.promotion .swiper-container', {
   navigation: {
     prevEl: '.promotion .swiper-prev',
     nextEl: '.promotion .swiper-next',
+  },
+});
+
+// Awards Swiper
+new Swiper('.awards .swiper-container', {
+  autoplay: true,
+  loop: true,
+  spaceBetween: 30,
+  slidesPerView: 5,
+
+  navigation: {
+    prevEl: '.awards .swiper-prev',
+    nextEl: '.awards .swiper-next',
   },
 });
 
@@ -127,3 +154,8 @@ spyEls.forEach(function (spyEl) {
     .setClassToggle(spyEl, 'show')
     .addTo(new ScrollMagic.Controller());
 });
+
+// YEAR Copyright
+
+const thisYear = document.querySelector('.this-year');
+thisYear.textContent = `${new Date().getFullYear()}`;
