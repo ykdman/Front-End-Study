@@ -1,4 +1,9 @@
+html.fixed {
+  position: fixed;
+  overflow-y: scroll;
+}
 body {
+  height: 100000px;
   font-size: 16px;
   line-height: 1;
   font-family: 'Roboto', 'Noto Sans KR', sans-serif;
@@ -146,6 +151,7 @@ header .search-wrap {
   top: 0;
   left: 0;
   width: 100%;
+  display: none;
 }
 
 header .search {
@@ -242,4 +248,8 @@ header .search .autocompletes ul li:hover a {
 header.searching ul.menu > li {
   /* searching 상태일 경우, 기존 menu 의 자식 li 들을 숨김 */
   display: none;
+}
+
+header.searching .search-wrap {
+  display: block;
 }

@@ -29,3 +29,33 @@ function showBasket() {
 function hideBasket() {
   baksetEl.classList.remove('show');
 }
+
+// 검색 바 토글
+const headerEl = document.querySelector('header');
+const searchWrapEl = headerEl.querySelector('.search-wrap');
+const searchStarterEl = headerEl.querySelector('.search-starter');
+const searchCloserEl = headerEl.querySelector('.search-closer');
+const searchShadowEl = headerEl.querySelector('.shadow');
+
+searchStarterEl.addEventListener('click', toggleHeaderSearchingClass);
+
+searchCloserEl.addEventListener('click', toggleHeaderSearchingClass);
+
+searchShadowEl.addEventListener('click', toggleHeaderSearchingClass);
+
+function addHeaderSearchingClass() {
+  headerEl.classList.add('searching');
+}
+
+function removeHeaderSearchingClass() {
+  headerEl.classList.remove('searching');
+}
+
+function toggleHeaderSearchingClass() {
+  headerEl.classList.toggle('searching');
+  if (headerEl.classList.contains('searching')) {
+    document.documentElement.classList.add('fixed');
+  } else {
+    document.documentElement.classList.remove('fixed');
+  }
+}
