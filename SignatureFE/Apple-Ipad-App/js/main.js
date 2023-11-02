@@ -29,3 +29,24 @@ function showBasket() {
 function hideBasket() {
   baksetEl.classList.remove('show');
 }
+
+// 검색 창 토글
+const headerEl = document.querySelector('header');
+const searchStarterEl = headerEl.querySelector('.search-starter');
+const searchWrapEl = headerEl.querySelector('.search-wrap');
+const searchCloserEl = searchWrapEl.querySelector('.search-closer');
+
+searchStarterEl.addEventListener('click', showSearchPanel);
+searchCloserEl.addEventListener('click', hideSearchPanel);
+
+function showSearchPanel() {
+  /**검색창 보이기 */
+  headerEl.classList.add('searching');
+  document.documentElement.classList.add('fixed');
+}
+
+function hideSearchPanel() {
+  /**검색창 숨기기 */
+  headerEl.classList.remove('searching');
+  document.documentElement.classList.remove('fixed');
+}
