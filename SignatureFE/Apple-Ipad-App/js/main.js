@@ -35,9 +35,11 @@ const headerEl = document.querySelector('header');
 const searchStarterEl = headerEl.querySelector('.search-starter');
 const searchWrapEl = headerEl.querySelector('.search-wrap');
 const searchCloserEl = searchWrapEl.querySelector('.search-closer');
+const searchShadowEl = searchWrapEl.querySelector('.shadow');
 
 searchStarterEl.addEventListener('click', showSearchPanel);
 searchCloserEl.addEventListener('click', hideSearchPanel);
+searchShadowEl.addEventListener('click', hideSearchPanel);
 
 function showSearchPanel() {
   /**검색창 보이기 */
